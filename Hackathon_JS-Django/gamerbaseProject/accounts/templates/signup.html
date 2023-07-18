@@ -1,0 +1,9 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+<h2 id="signupLabel">Signup</h2>
+<form id="signupForm" method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Sign Up</button>
+</form>
+{% endblock %}

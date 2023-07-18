@@ -1,0 +1,66 @@
+
+<!-- homepage.html -->
+{%extends 'partials/base.html'%} 
+{% load static %}
+{%block content%}
+
+    <button id="startSearchBTN" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#gameForm" aria-expanded="false" aria-controls="gameForm">Start searching</button>
+
+    <form class="collapse multi-collapse" id="gameForm">
+        <div class="search-bar">
+            <input id="searchInput" type="text" placeholder="Search...">
+        </div>
+        <label for="dateFrom">From: </label>
+        <input id="dateFrom" type="date">
+        <label for="dateTo">To: </label>
+        <input id="dateTo" type="date">
+        <div class="dropdown">
+            <button id="platforms-btn" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Platforms
+            </button>
+            <div id="platforms-list" class="dropdown-menu" aria-labelledby="platformDropdown">
+                <!-- <label class="dropdown-item">
+                <input type="checkbox" name="platform" value="all" checked="true"> Select All
+                </label> -->
+            </div>
+        </div>
+        <div class="dropdown">
+            <button id="genres-btn" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Genres
+            </button>
+            <div id="genres-list" class="dropdown-menu" aria-labelledby="genreDropdown">
+                <!-- <label class="dropdown-item">
+                <input type="checkbox" name="genre" value="all" checked="true"> Select All
+                </label> -->
+            </div>
+        </div>
+        <br>
+        <div id="orderParameters" class="order-parameters">
+            <label for="orderBy">Order By:</label>
+            <select id="orderBy">
+                <option value="">-- Select Order By --</option>
+                <option value="name">Name</option>
+                <option value="released">Released</option>
+                <option value="rating">Rating</option>
+            </select>
+            
+            <label for="sortOrder">Sort Order:</label>
+            <select id="sortOrder">
+                <option value="">Ascending</option>
+                <option value="-">Descending</option>
+            </select>
+            
+        </div>
+
+        <button id="searchSubmitBtn">Search</button>
+    </form>
+    <div id="gameCardsContainer">
+
+    </div>
+    <div id="pagesButtons">
+
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <script src="{% static 'script.js' %}"></script>
+{% endblock %}

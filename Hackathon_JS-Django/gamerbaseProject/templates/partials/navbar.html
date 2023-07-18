@@ -1,0 +1,40 @@
+<nav class="nav" style="background-color: #e3f2fd;">
+
+
+      <ul class="nav">
+        <li class="nav-item">
+          <a id="brand" class="nav-link active" aria-current="page" href="{% url 'homepage' %}">gamerbase</a>
+        </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Homepage</a>
+        </li>
+        {% endif %}
+        {% if not user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'signup' %}"
+            >Signup</a
+          >
+        </li>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <li id="userProfileID" class="nav-item">
+                <a class="nav-link" href="{% url 'profile' user.id %}">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'mylist' %}">My list</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+            </li>
+        {% endif %}
+      </ul>
+
+</nav>
+
+

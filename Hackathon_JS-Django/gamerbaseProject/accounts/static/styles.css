@@ -1,0 +1,268 @@
+/* style.css */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set minimum height of the viewport */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Search Form Styles */
+.search-bar {
+  margin-bottom: 10px;
+}
+
+#gameForm {
+  margin-bottom: 20px;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-toggle {
+  width: 200px;
+  text-align: left;
+}
+
+form {
+  padding: 20px;
+}
+
+.search-bar {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.dropdown-toggle,
+button {
+  padding: 10px 20px;
+}
+
+.order-parameters {
+  margin-bottom: 10px;
+}
+
+
+/* Card Styles */
+#gameCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Align items at the top of the flex container */
+  gap: 20px; /* Add a gap between cards */
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: calc(33.33% - 40px); /* Subtract twice the padding from the width */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 5px;
+}
+
+/* Pagination Styles */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#previousButton,
+#nextButton {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 100%;
+  }
+}
+
+
+/* Search Button */
+#searchSubmitBtn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Pagination Styles */
+#previousButton,
+#nextButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#pagesButtons span {
+  margin: 0 10px;
+}
+
+
+/* Media Queries */
+@media (max-width: 576px) {
+  #previousButton,
+  #nextButton {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+
+/* Login Form Styles */
+#loginLabel {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#loginForm {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#loginForm button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Signup Form Styles */
+#signupLabel {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#signupForm {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#signupForm button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Password Requirements Styles */
+#signupForm ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#signupForm ul li {
+  margin-bottom: 10px;
+  font-size: 14px; /* Adjust the font size as desired */
+}
+
+#signupForm ul li {
+  margin-bottom: 10px;
+}
+
+#signupForm ul li:nth-child(n+2) {
+  display: none; /* Hide the 2nd, 3rd, and 4th li tags by default */
+}
+
+#signupForm ul:hover li:nth-child(n+2) {
+  display: block; /* Show the li tags on hover */
+}
+
+#startSearchBTN {
+    margin-left: 5em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    width: fit-content;
+}
